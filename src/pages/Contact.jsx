@@ -1,19 +1,29 @@
+import { motion } from "framer-motion"
+
 export default function Contact() {
   return (
-    <section className="p-10 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">Contact</h1>
-      <p className="text-gray-600 mb-4">
-        Pour toute demande ou devis, contactez Gold Cuisine :
-      </p>
+    <section className="py-20 px-6 max-w-6xl mx-auto">
+      <motion.h1
+        className="text-4xl font-bold mb-6 text-center text-gray-800"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        Contactez-nous
+      </motion.h1>
 
-      <form className="flex flex-col gap-4">
-        <input type="text" placeholder="Nom" className="border p-2 rounded" />
-        <input type="email" placeholder="Email" className="border p-2 rounded" />
-        <textarea placeholder="Message" className="border p-2 rounded"></textarea>
-        <button type="submit" className="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600">
-          Envoyer
-        </button>
-      </form>
+      <motion.p
+        className="text-gray-600 max-w-3xl mx-auto text-center mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        Remplissez le formulaire ou contactez-nous directement par téléphone ou email pour un devis personnalisé.
+      </motion.p>
+
+      {/* Ici tu pourras ajouter ton formulaire plus tard */}
     </section>
   )
 }
