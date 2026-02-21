@@ -3,97 +3,212 @@ import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 
 export default function Contact() {
+
   const formRef = useRef()
-  const [successMessage, setSuccessMessage] = useState("")
+  const [messageStatus, setMessageStatus] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    emailjs
-      .sendForm(
-        "service_aydiace",      // Service ID
-        "template_bcgsxp8",     // Template ID
-        formRef.current,
-        "F7Rn7vGrMM09PgSnW"     // User ID / Public Key
-      )
-     .then(
-  (result) => {
-    console.log(result.text)
-    setSuccessMessage("Votre message a été envoyé avec succès !")
-    formRef.current.reset()
-  },
-  (error) => {
-    console.log("ERROR:", error)
-    setSuccessMessage("Une erreur est survenue.")
-  }
-)
+    emailjs.sendForm(
+      "service_aydiace",
+      "template_bcgsxp8",
+      formRef.current,
+      "F7Rn7vGrMM09PgSnW"
+    )
+    .then(() => {
+      setMessageStatus("✅ Message envoyé avec succès")
+      formRef.current.reset()
+    })
+    .catch(() => {
+      setMessageStatus("❌ Erreur lors de l'envoi")
+    })
   }
 
   return (
-    <section className="py-20 px-6 max-w-6xl mx-auto">
-      <motion.h1
-        className="text-4xl font-bold mb-6 text-center text-gray-800"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        Contactez-nous
-      </motion.h1>
 
-      <motion.p
-        className="text-gray-600 max-w-3xl mx-auto text-center mb-12"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        Remplissez le formulaire ou contactez-nous directement par téléphone ou email pour un devis personnalisé.
-      </motion.p>
+    <div>
 
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="max-w-xl mx-auto flex flex-col gap-6"
-      >
-        <input
-          type="text"
-          name="user_name"
-          placeholder="Votre nom"
-          required
-          className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        />
-        <input
-          type="email"
-          name="user_email"
-          placeholder="Votre email"
-          required
-          className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        />
-        <textarea
-          name="message"
-          placeholder="Votre message"
-          required
-          rows="6"
-          className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        />
-        <button
-          type="submit"
-          className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg transition duration-300"
-        >
-          Envoyer
-        </button>
-      </form>
+{/* HERO */}
 
-      {successMessage && (
-        <p className="text-center mt-6 text-green-500 font-semibold">{successMessage}</p>
-      )}
+<section className="bg-gray-900 text-white py-20 text-center">
 
-      <div className="mt-12 text-center text-gray-700">
-        <p>Téléphone / WhatsApp : 0557 07 58 75</p>
-        <p>Email : goldcuisine11@gmail.com</p>
-        <p>Adresse : Lotissement 11N22 centre Hammadi Boumerdes</p>
-      </div>
-    </section>
-  )
+<motion.h1
+initial={{opacity:0,y:40}}
+animate={{opacity:1,y:0}}
+transition={{duration:1}}
+className="text-4xl md:text-6xl font-bold mb-4"
+>
+
+Contactez-nous
+
+</motion.h1>
+
+<p className="text-gray-300">
+
+Nous sommes disponibles pour votre projet cuisine
+
+</p>
+
+</section>
+
+
+{/* CONTENT */}
+
+<section className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+
+
+{/* FORM */}
+
+<motion.div
+initial={{opacity:0,x:-50}}
+whileInView={{opacity:1,x:0}}
+viewport={{once:true}}
+transition={{duration:1}}
+>
+
+<h2 className="text-2xl font-bold mb-6">
+
+Envoyer un message
+
+</h2>
+
+<form
+ref={formRef}
+onSubmit={handleSubmit}
+className="flex flex-col gap-5"
+>
+
+<input
+name="user_name"
+placeholder="Votre nom"
+required
+className="border p-3 rounded-lg"
+/>
+
+
+<input
+name="user_email"
+placeholder="Votre email"
+required
+className="border p-3 rounded-lg"
+/>
+
+
+<textarea
+name="message"
+placeholder="Votre message"
+required
+rows="6"
+className="border p-3 rounded-lg"
+/>
+
+
+<button
+className="bg-yellow-500 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+>
+
+Envoyer
+
+</button>
+
+</form>
+
+
+<p className="mt-4 font-semibold">
+
+{messageStatus}
+
+</p>
+
+</motion.div>
+
+
+
+{/* INFOS */}
+
+<motion.div
+initial={{opacity:0,x:50}}
+whileInView={{opacity:1,x:0}}
+viewport={{once:true}}
+transition={{duration:1}}
+>
+
+<h2 className="text-2xl font-bold mb-6">
+
+Informations
+
+</h2>
+
+
+<div className="space-y-4 text-gray-700">
+
+<p>
+
+📍 Lotissement 11N22 centre Hammadi Boumerdes
+
+</p>
+
+
+<p>
+
+📧 goldcuisine11@gmail.com
+
+</p>
+
+
+<p>
+
+📱 0557 07 58 75
+
+</p>
+
+
+<a
+
+href="https://wa.me/213557075875"
+
+target="_blank"
+
+className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mt-4"
+
+>
+
+WhatsApp
+
+</a>
+
+
+</div>
+
+</motion.div>
+
+</section>
+
+
+
+{/* MAP */}
+
+<section className="h-[400px]">
+
+<iframe
+
+src="https://maps.google.com/maps?q=Hammadi%20Boumerdes&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+width="100%"
+
+height="100%"
+
+style={{border:0}}
+
+loading="lazy"
+
+/>
+
+</section>
+
+
+</div>
+
+)
 }
