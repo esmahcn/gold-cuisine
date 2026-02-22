@@ -1,18 +1,43 @@
 import Navbar from "./Navbar"
+import Footer from "./Footer"
+import WhatsAppButton from "./WhatsAppButton"
+import { AnimatePresence, motion } from "framer-motion"
+import { useLocation } from "react-router-dom"
 
 export default function Layout({ children }) {
+
+  const location = useLocation()
+
   return (
     <div className="relative min-h-screen flex flex-col">
+
       {/* Navbar */}
       <Navbar />
 
-      {/* Page content */}
-      <main className="flex-1 pt-[80px]">{children}</main>
+      {/* Page Animation */}
+      <AnimatePresence mode="wait">
+
+        <motion.main
+          key={location.pathname}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.6 }}
+          className="flex-1 pt-[80px]"
+        >
+
+          {children}
+
+        </motion.main>
+
+      </AnimatePresence>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 text-center">
-        <p className="text-gray-400">&copy; {new Date().getFullYear()} Gold Cuisine. Tous droits réservés.</p>
-      </footer>
+      <Footer />
+
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+
     </div>
   )
 }

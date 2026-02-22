@@ -1,130 +1,60 @@
-import { Link } from "react-router-dom"
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-14 pb-6">
+    <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-
-        {/* COMPANY */}
+        {/* Logo */}
         <div>
-
           <h2 className="text-2xl font-bold text-yellow-500 mb-4">
             Gold Cuisine
           </h2>
-
-          <p className="text-gray-400 leading-relaxed">
-            Fabrication de cuisines modernes et mobilier sur mesure.
-            Nous créons des espaces élégants et fonctionnels adaptés
-            à votre style.
+          <p className="text-gray-400 text-sm">
+            Spécialiste des cuisines modernes et mobilier sur mesure en Algérie.
           </p>
-
         </div>
 
-
-
-        {/* NAVIGATION */}
+        {/* Contact Info */}
         <div>
-
-          <h3 className="text-lg font-semibold mb-4">
-            Navigation
-          </h3>
-
-          <ul className="space-y-2">
-
-            <li>
-              <Link
-                to="/"
-                className="hover:text-yellow-500 transition"
-              >
-                Accueil
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/about"
-                className="hover:text-yellow-500 transition"
-              >
-                À propos
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/gallery"
-                className="hover:text-yellow-500 transition"
-              >
-                Galerie
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/contact"
-                className="hover:text-yellow-500 transition"
-              >
-                Contact
-              </Link>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        {/* CONTACT */}
-        <div>
-
-          <h3 className="text-lg font-semibold mb-4">
+          <h3 className="text-lg font-semibold text-white mb-4">
             Contact
           </h3>
 
-          <div className="space-y-3 text-gray-400">
-
-            <p>
-              📍 Lotissement 11N22 centre Hammadi Boumerdes
-            </p>
-
-            <p>
-              📧 goldcuisine11@gmail.com
-            </p>
-
-            <p>
-              📱 0557 07 58 75
-            </p>
-
-
-            <a
-              href="https://wa.me/213557075875"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-3 bg-green-500 px-5 py-2 rounded-lg text-white hover:bg-green-600 transition"
-            >
-              WhatsApp
-            </a>
-
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+            <FaWhatsapp className="text-yellow-500" />
+            <span>0557 07 58 75</span>
           </div>
 
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+            <FaEnvelope className="text-yellow-500" />
+            <span>goldcuisine11@gmail.com</span>
+          </div>
+
+          <div className="flex items-center justify-center md:justify-start gap-3">
+            <FaMapMarkerAlt className="text-yellow-500" />
+            <span>Lotissement 11N22 centre Hammadi Boumerdes</span>
+          </div>
         </div>
 
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Navigation
+          </h3>
+          <ul className="space-y-2">
+            <li><a href="/" className="hover:text-yellow-500 transition">Home</a></li>
+            <li><a href="/about" className="hover:text-yellow-500 transition">About</a></li>
+            <li><a href="/gallery" className="hover:text-yellow-500 transition">Gallery</a></li>
+            <li><a href="/contact" className="hover:text-yellow-500 transition">Contact</a></li>
+          </ul>
+        </div>
 
       </div>
 
-
-
-      {/* BOTTOM */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-
-        © {new Date().getFullYear()} Gold Cuisine
-
-        <br />
-
-        Tous droits réservés
-
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Gold Cuisine – Tous droits réservés
       </div>
-
     </footer>
   )
 }
