@@ -14,7 +14,7 @@ export default function LoadingScreen() {
 
         {/* Logo */}
         <motion.img
-          src="/images/logo.png"
+          src="/images/logo.jpeg"
           className="w-32 mx-auto mb-6"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
