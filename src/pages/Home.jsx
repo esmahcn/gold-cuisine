@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import HeroSlider from "../components/HeroSlider"
 
 export default function Home() {
   return (

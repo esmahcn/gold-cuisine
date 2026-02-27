@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import WhatsAppButton from "./WhatsAppButton"
+import MusicPlayer from "./MusicPlayer"
 import { AnimatePresence, motion } from "framer-motion"
 import { useLocation } from "react-router-dom"
 
@@ -37,6 +38,7 @@ export default function Layout({ children }) {
 
       {/* WhatsApp Button */}
       <WhatsAppButton />
+      <MusicPlayer />
 
     </div>
   )

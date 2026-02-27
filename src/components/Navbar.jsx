@@ -64,7 +64,7 @@ export default function Navbar() {
               {/* LOGO */}
               <Link to="/" className="flex items-center gap-3">
                 <motion.img
-                  src="/images/logo.jpeg"
+                  src="/images/logo2.jpeg"
                   alt="Logo"
                   className="w-auto"
                   animate={{
