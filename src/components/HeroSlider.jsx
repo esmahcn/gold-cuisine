@@ -7,20 +7,38 @@ export default function HeroSlider() {
 
     {
       image: "/images/homep.jpeg",
-      title: "Cuisines Modernes",
-      text: "Design élégant et fabrication sur mesure"
+      title: "Gold Cuisine",
+      text: "Cuisines modernes et élégantes"
     },
 
     {
-      image: "/images/r1.jpeg",
+      image: "/images/r30.jpeg",
+      title: "Design Moderne",
+      text: "Des styles modernes et luxueux"
+    },
+
+    {
+      image: "/images/r13.jpeg",
       title: "Qualité Premium",
       text: "Matériaux haut de gamme"
     },
 
     {
-      image: "/images/r12.jpeg",
-      title: "Dressing Sur Mesure",
-      text: "Optimisez votre espace"
+      image: "/images/r8.jpeg",
+      title: "Fabrication Sur Mesure",
+      text: "Cuisine adaptée à votre espace"
+    },
+
+    {
+      image: "/images/r19.jpeg",
+      title: "Élégance",
+      text: "Design unique et raffiné"
+    },
+
+    {
+      image: "/images/r23.jpeg",
+      title: "Professionnel",
+      text: "Installation rapide et garantie"
     }
 
   ]
@@ -37,7 +55,7 @@ export default function HeroSlider() {
         prev === slides.length - 1 ? 0 : prev + 1
       )
 
-    }, 4000)
+    }, 5000)
 
     return () => clearInterval(interval)
 
@@ -47,7 +65,8 @@ export default function HeroSlider() {
 
   return (
 
-    <div className="relative h-[80vh] overflow-hidden">
+    <div className="absolute inset-0">
+
 
       <AnimatePresence>
 
@@ -59,65 +78,88 @@ export default function HeroSlider() {
 
           className="absolute w-full h-full object-cover"
 
-          initial={{ opacity: 0, scale: 1.1 }}
 
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{
+            opacity: 0,
+            scale: 1.1
+          }}
 
-          exit={{ opacity: 0 }}
 
-          transition={{ duration: 1 }}
+          animate={{
+            opacity: 1,
+            scale: 1
+          }}
+
+
+          exit={{
+            opacity: 0
+          }}
+
+
+          transition={{
+            duration: 2
+          }}
 
         />
 
       </AnimatePresence>
 
 
-      {/* Dark overlay */}
 
-      <div className="absolute inset-0 bg-black/60"></div>
+      {/* TEXT ON IMAGE */}
 
-
-      {/* Text */}
-
-      <div className="relative h-full flex flex-col justify-center items-center text-white text-center px-6">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 px-6">
 
 
-        <motion.h1
-
-          key={slides[index].title}
-
-          initial={{ opacity: 0, y: 40 }}
-
-          animate={{ opacity: 1, y: 0 }}
-
-          transition={{ duration: 1 }}
-
-          className="text-4xl md:text-6xl font-bold mb-4"
-
-        >
-
-          {slides[index].title}
-
-        </motion.h1>
+        <AnimatePresence mode="wait">
 
 
-        <motion.p
+          <motion.div
 
-          key={slides[index].text}
+            key={index}
 
-          initial={{ opacity: 0, y: 40 }}
+            initial={{
+              opacity: 0,
+              y: 40
+            }}
 
-          animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
 
-          transition={{ duration: 1 }}
+            exit={{
+              opacity: 0,
+              y: -40
+            }}
 
-          className="text-lg md:text-xl"
+            transition={{
+              duration: 1
+            }}
 
-        >
+          >
 
-          {slides[index].text}
 
-        </motion.p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+
+              {slides[index].title}
+
+            </h1>
+
+
+
+            <p className="text-lg md:text-xl text-gray-200">
+
+              {slides[index].text}
+
+            </p>
+
+
+          </motion.div>
+
+
+        </AnimatePresence>
+
 
       </div>
 
@@ -125,5 +167,4 @@ export default function HeroSlider() {
     </div>
 
   )
-
 }

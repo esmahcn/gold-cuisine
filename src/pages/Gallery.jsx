@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { PhotoProvider, PhotoView } from "react-photo-view"
 import "react-photo-view/dist/react-photo-view.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Gallery() {
 
@@ -19,48 +19,48 @@ export default function Gallery() {
 
   // Images with categories
   const galleryImages = [
-
     { src: "/images/r1.jpeg", category: "Cuisine" },
     { src: "/images/r2.jpeg", category: "Cuisine" },
     { src: "/images/r4.jpeg", category: "Cuisine" },
     { src: "/images/r5.jpeg", category: "Cuisine" },
-
     { src: "/images/r6.jpeg", category: "Chambre à coucher" },
     { src: "/images/r7.jpeg", category: "Chambre à coucher" },
-
     { src: "/images/r8.jpeg", category: "Meuble TV" },
     { src: "/images/r9.jpeg", category: "Meuble TV" },
-
     { src: "/images/r10.jpeg", category: "Meuble chaussure" },
     { src: "/images/r11.jpeg", category: "Meuble chaussure" },
-
     { src: "/images/r12.jpeg", category: "Dressing" },
     { src: "/images/r13.jpeg", category: "Dressing" },
-
     { src: "/images/r14.jpeg", category: "Cuisine" },
     { src: "/images/r15.jpeg", category: "Cuisine" },
     { src: "/images/r16.jpeg", category: "Cuisine" },
     { src: "/images/r17.jpeg", category: "Cuisine" },
     { src: "/images/r18.jpeg", category: "Cuisine" },
-
   ]
-
 
   // Filter images
   const filteredImages =
     activeCategory === "Tous"
       ? galleryImages
-      : galleryImages.filter(
-          img => img.category === activeCategory
-        )
+      : galleryImages.filter(img => img.category === activeCategory)
+
+  // Load Elfsight Instagram Widget
+  useEffect(() => {
+    const scriptId = "elfsight-instagram-script"
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script")
+      script.id = scriptId
+      script.src = "https://apps.elfsight.com/p/platform.js"
+      script.async = true
+      document.body.appendChild(script)
+    }
+  }, [])
 
   return (
-
     <div className="relative overflow-hidden">
 
       {/* HERO */}
       <section className="relative h-[60vh] flex items-center justify-center text-white">
-
         <motion.img
           src="/images/homep.jpeg"
           className="absolute w-full h-full object-cover"
@@ -68,86 +68,58 @@ export default function Gallery() {
           animate={{ scale: 1 }}
           transition={{ duration: 10 }}
         />
-
         <div className="absolute inset-0 bg-black/70"></div>
-
-        <h1 className="relative text-5xl font-bold">
-          Nos Réalisations
-        </h1>
-
+        <h1 className="relative text-5xl font-bold">Nos Réalisations</h1>
       </section>
-
 
       {/* CATEGORIES */}
-
       <section className="py-10 text-center">
-
         <div className="flex flex-wrap justify-center gap-4">
-
           {categories.map(cat => (
-
             <button
               key={cat}
-
-              onClick={() =>
-                setActiveCategory(cat)
-              }
-
+              onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2 rounded-full border transition
-
-              ${
-                activeCategory === cat
-                  ? "bg-yellow-500 text-black"
-                  : "bg-white text-gray-700"
-              }
-
+                ${activeCategory === cat ? "bg-yellow-500 text-black" : "bg-white text-gray-700"}
               `}
             >
-
               {cat}
-
             </button>
-
           ))}
-
         </div>
-
       </section>
-
 
       {/* GALLERY */}
-
       <section className="pb-20 px-6 max-w-6xl mx-auto">
-
         <PhotoProvider>
-
           <div className="grid md:grid-cols-3 gap-6">
-
             {filteredImages.map((img, index) => (
-
               <PhotoView key={index} src={img.src}>
-
                 <motion.img
-
                   src={img.src}
-
                   className="w-full h-64 object-cover rounded-xl cursor-pointer shadow-lg hover:scale-105 transition"
-
                 />
-
               </PhotoView>
-
             ))}
-
           </div>
-
         </PhotoProvider>
-
       </section>
 
+      {/* INSTAGRAM FEED (Carousel Luxe) */}
+      <section className="pb-20 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">Suivez-nous sur Instagram</h2>
+        <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
+          {/* <-- Elfsight Instagram Feed --> */}
+          <div
+            className="elfsight-app w-full"
+            data-app-id="TON_APP_ID_ICI"
+          ></div>
+        </div>
+        <p className="text-gray-500 mt-4">
+          Les dernières publications directement depuis notre compte Instagram.
+        </p>
+      </section>
 
     </div>
-
   )
-
 }
