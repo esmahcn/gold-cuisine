@@ -21,27 +21,23 @@ export default function Home() {
         animate-pulse z-10"></div>
 
 
-       {/* BUTTON POSITION */}
+     {/* BUTTON POSITION */}
 <div className="absolute top-[65%] left-1/2 -translate-x-1/2 z-20">
-
   <motion.div
     initial={{ opacity: 0, y: 60 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1.6 }}
   >
-
     <Link
       to="/gallery"
       className="bg-yellow-500 text-black font-semibold 
-      px-12 py-4 rounded-full 
-      shadow-lg hover:shadow-yellow-500/40
-      transition duration-300"
+                 px-6 py-2 sm:px-8 sm:py-3 md:px-12 md:py-4 
+                 rounded-full shadow-lg hover:shadow-yellow-500/40 
+                 transition duration-300 text-sm sm:text-base md:text-lg"
     >
       Voir nos réalisations
     </Link>
-
   </motion.div>
-
 </div>
         {/* Scroll Animation */}
         <motion.div
