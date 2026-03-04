@@ -19,23 +19,28 @@ export default function Gallery() {
 
   // Images with categories
   const galleryImages = [
-    { src: "/images/r1.jpeg", category: "Cuisine" },
-    { src: "/images/r2.jpeg", category: "Cuisine" },
-    { src: "/images/r4.jpeg", category: "Cuisine" },
+    { src: "/images/homep.jpeg", category: "Cuisine" },
     { src: "/images/r5.jpeg", category: "Cuisine" },
-    { src: "/images/r6.jpeg", category: "Chambre à coucher" },
-    { src: "/images/r7.jpeg", category: "Chambre à coucher" },
-    { src: "/images/r8.jpeg", category: "Meuble TV" },
+    { src: "/images/r8.jpeg", category: "Cuisine" },
+    { src: "/images/r12.jpeg", category: "Cuisine" },
+  { src: "/images/r24.jpeg", category: "Cuisine" },
+   { src: "/images/r30.jpeg", category: "Cuisine" },
+    { src: "/images/r33.jpeg", category: "Cuisine" },
+
+    
+    { src: "/images/r31.jpeg", category: "Chambre à coucher" },
+    { src: "/images/r25.jpeg", category: "Chambre à coucher" },
+ { src: "/images/r16.jpeg", category: "Chambre à coucher" },
+ { src: "/images/r7.jpeg", category: "Chambre à coucher" },
+  { src: "/images/r4.jpeg", category: "Chambre à coucher" },
+
+    { src: "/images/r30.jpeg", category: "Meuble TV" },
     { src: "/images/r9.jpeg", category: "Meuble TV" },
     { src: "/images/r10.jpeg", category: "Meuble chaussure" },
     { src: "/images/r11.jpeg", category: "Meuble chaussure" },
     { src: "/images/r12.jpeg", category: "Dressing" },
     { src: "/images/r13.jpeg", category: "Dressing" },
-    { src: "/images/r14.jpeg", category: "Cuisine" },
-    { src: "/images/r15.jpeg", category: "Cuisine" },
-    { src: "/images/r16.jpeg", category: "Cuisine" },
-    { src: "/images/r17.jpeg", category: "Cuisine" },
-    { src: "/images/r18.jpeg", category: "Cuisine" },
+    
   ]
 
   // Filter images
@@ -112,7 +117,7 @@ export default function Gallery() {
   </h2>
 
   <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
-  <div class="elfsight-app-d859b368-c0c3-41a1-9875-9960c486687d" data-elfsight-app-lazy></div>
+  <div class="elfsight-app-03420ed0-38d8-4173-bfec-15662615e97a" data-elfsight-app-lazy></div>
   </div>
 
   <p className="text-gray-500 mt-4">
