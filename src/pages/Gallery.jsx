@@ -105,20 +105,20 @@ export default function Gallery() {
         </PhotoProvider>
       </section>
 
-      {/* INSTAGRAM FEED (Carousel Luxe) */}
-      <section className="pb-20 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Suivez-nous sur Instagram</h2>
-        <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
-          {/* <-- Elfsight Instagram Feed --> */}
-          <div
-            className="elfsight-app w-full"
-            data-app-id="TON_APP_ID_ICI"
-          ></div>
-        </div>
-        <p className="text-gray-500 mt-4">
-          Les dernières publications directement depuis notre compte Instagram.
-        </p>
-      </section>
+    {/* INSTAGRAM FEED */}
+<section className="pb-20 px-6 max-w-6xl mx-auto text-center">
+  <h2 className="text-3xl font-bold mb-6">
+    Suivez-nous sur Instagram
+  </h2>
+
+  <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
+  <div class="elfsight-app-d859b368-c0c3-41a1-9875-9960c486687d" data-elfsight-app-lazy></div>
+  </div>
+
+  <p className="text-gray-500 mt-4">
+    Les dernières publications directement depuis notre compte Instagram.
+  </p>
+</section>
 
     </div>
   )
