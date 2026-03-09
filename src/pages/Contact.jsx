@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
-
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa"
 export default function Contact() {
 
   const formRef = useRef()
@@ -165,19 +165,51 @@ Informations
 
 
 <a
-
 href="https://wa.me/213557075875"
-
 target="_blank"
-
 className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mt-4"
-
 >
-
 WhatsApp
-
 </a>
 
+{/* SOCIAL MEDIA */}
+
+<div className="flex gap-4 mt-6">
+
+<motion.a
+whileHover={{ scale: 1.2 }}
+whileTap={{ scale: 0.9 }}
+href="https://www.instagram.com/cuisine.gold?igsh=MTFsbGVibXZmczV4Yg=="
+target="_blank"
+rel="noopener noreferrer"
+className="bg-gray-100 p-3 rounded-full text-xl hover:bg-pink-500 hover:text-white transition"
+>
+<FaInstagram />
+</motion.a>
+
+<motion.a
+whileHover={{ scale: 1.2 }}
+whileTap={{ scale: 0.9 }}
+href="https://www.facebook.com/profile.php?id=100063522665366"
+target="_blank"
+rel="noopener noreferrer"
+className="bg-gray-100 p-3 rounded-full text-xl hover:bg-blue-600 hover:text-white transition"
+>
+<FaFacebook />
+</motion.a>
+
+<motion.a
+whileHover={{ scale: 1.2 }}
+whileTap={{ scale: 0.9 }}
+href="https://www.tiktok.com/@gold.cuisine?_r=1&_t=ZS-94XkNjKN4Ho"
+target="_blank"
+rel="noopener noreferrer"
+className="bg-gray-100 p-3 rounded-full text-xl hover:bg-black hover:text-white transition"
+>
+<FaTiktok />
+</motion.a>
+
+</div>
 
 </div>
 

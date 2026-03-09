@@ -34,13 +34,28 @@ export default function Gallery() {
  { src: "/images/r7.jpeg", category: "Chambre à coucher" },
   { src: "/images/r4.jpeg", category: "Chambre à coucher" },
 
-    { src: "/images/r30.jpeg", category: "Meuble TV" },
-    { src: "/images/r9.jpeg", category: "Meuble TV" },
-    { src: "/images/r10.jpeg", category: "Meuble chaussure" },
-    { src: "/images/r11.jpeg", category: "Meuble chaussure" },
-    { src: "/images/r12.jpeg", category: "Dressing" },
-    { src: "/images/r13.jpeg", category: "Dressing" },
-    
+    { src: "/images/r13.jpeg", category: "Meuble TV" },
+    { src: "/images/r14.jpeg", category: "Meuble TV" },
+     { src: "/images/r26.jpeg", category: "Meuble TV" },
+
+    //{ src: "/images/r10.jpeg", category: "Meuble chaussure" },
+  //  { src: "/images/r11.jpeg", category: "Meuble chaussure" },
+    { src: "/images/r1.jpeg", category: "Dressing" },
+    { src: "/images/r2.jpeg", category: "Dressing" },
+    { src: "/images/r6.jpeg", category: "Dressing" },
+    { src: "/images/r9.jpeg", category: "Dressing" },
+    { src: "/images/r10.jpeg", category: "Dressing" },
+    { src: "/images/r11.jpeg", category: "Dressing" },
+    { src: "/images/r15.jpeg", category: "Dressing" },
+    { src: "/images/r17.jpeg", category: "Dressing" },
+    { src: "/images/r18.jpeg", category: "Dressing" },
+    { src: "/images/r19.jpeg", category: "Dressing" },
+    { src: "/images/r20.jpeg", category: "Dressing" },
+    { src: "/images/r22.jpeg", category: "Dressing" },
+{ src: "/images/r23.jpeg", category: "Dressing" },
+    { src: "/images/r27.jpeg", category: "Dressing" },
+    { src: "/images/r28.jpeg", category: "Dressing" },
+    { src: "/images/r29.jpeg", category: "Dressing" },
   ]
 
   // Filter images
