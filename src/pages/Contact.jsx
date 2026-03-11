@@ -2,6 +2,7 @@ import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa"
+
 export default function Contact() {
 
   const formRef = useRef()
@@ -27,7 +28,7 @@ export default function Contact() {
 
   return (
 
-    <div>
+<div>
 
 {/* HERO */}
 
@@ -45,9 +46,7 @@ Contactez-nous
 </motion.h1>
 
 <p className="text-gray-300">
-
 Nous sommes disponibles pour votre projet cuisine
-
 </p>
 
 </section>
@@ -68,9 +67,7 @@ transition={{duration:1}}
 >
 
 <h2 className="text-2xl font-bold mb-6">
-
 Envoyer un message
-
 </h2>
 
 <form
@@ -86,14 +83,12 @@ required
 className="border p-3 rounded-lg"
 />
 
-
 <input
 name="user_email"
 placeholder="Votre email"
 required
 className="border p-3 rounded-lg"
 />
-
 
 <textarea
 name="message"
@@ -102,7 +97,6 @@ required
 rows="6"
 className="border p-3 rounded-lg"
 />
-
 
 <button
 className="bg-yellow-500 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
@@ -114,15 +108,11 @@ Envoyer
 
 </form>
 
-
 <p className="mt-4 font-semibold">
-
 {messageStatus}
-
 </p>
 
 </motion.div>
-
 
 
 {/* INFOS */}
@@ -135,76 +125,77 @@ transition={{duration:1}}
 >
 
 <h2 className="text-2xl font-bold mb-6">
-
 Informations
-
 </h2>
-
 
 <div className="space-y-4 text-gray-700">
 
-<p>
+<p>📍 Lotissement 11N22 centre Hammadi Boumerdes</p>
 
-📍 Lotissement 11N22 centre Hammadi Boumerdes
+<p>📧 goldcuisine11@gmail.com</p>
 
-</p>
+<p>📱 0557 07 58 75</p>
+
+{/* HORAIRES */}
+
+<div className="bg-gray-100 p-4 rounded-lg mt-4">
+
+<p className="font-semibold mb-2">🕒 Horaires d'ouverture</p>
+
+<p>Tous les jours : 09:00 - 16:30</p>
+
+<p className="text-red-500">Vendredi : Fermé</p>
+
+</div>
 
 
-<p>
-
-📧 goldcuisine11@gmail.com
-
-</p>
-
-
-<p>
-
-📱 0557 07 58 75
-
-</p>
-
+{/* WHATSAPP */}
 
 <a
 href="https://wa.me/213557075875"
 target="_blank"
+rel="noopener noreferrer"
 className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mt-4"
 >
+
 WhatsApp
+
 </a>
+
 
 {/* SOCIAL MEDIA */}
 
-<div className="flex gap-4 mt-6">
+<div className="flex gap-3 md:gap-5 mt-6 text-xl md:text-2xl">
 
 <motion.a
-whileHover={{ scale: 1.2 }}
+whileHover={{ scale: 1.15 }}
 whileTap={{ scale: 0.9 }}
-href="https://www.instagram.com/cuisine.gold?igsh=MTFsbGVibXZmczV4Yg=="
+href="https://www.instagram.com/cuisine.gold"
 target="_blank"
 rel="noopener noreferrer"
-className="bg-gray-100 p-3 rounded-full text-xl hover:bg-pink-500 hover:text-white transition"
+className="bg-gray-100 p-3 md:p-4 rounded-full hover:bg-pink-500 hover:text-white transition"
 >
 <FaInstagram />
 </motion.a>
 
 <motion.a
-whileHover={{ scale: 1.2 }}
+whileHover={{ scale: 1.15 }}
 whileTap={{ scale: 0.9 }}
 href="https://www.facebook.com/profile.php?id=100063522665366"
 target="_blank"
 rel="noopener noreferrer"
-className="bg-gray-100 p-3 rounded-full text-xl hover:bg-blue-600 hover:text-white transition"
+className="bg-gray-100 p-3 md:p-4 rounded-full hover:bg-blue-600 hover:text-white transition"
 >
 <FaFacebook />
 </motion.a>
 
 <motion.a
-whileHover={{ scale: 1.2 }}
+whileHover={{ scale: 1.15 }}
 whileTap={{ scale: 0.9 }}
-href="https://www.tiktok.com/@gold.cuisine?_r=1&_t=ZS-94XkNjKN4Ho"
+href="https://www.tiktok.com/@gold.cuisine"
 target="_blank"
 rel="noopener noreferrer"
-className="bg-gray-100 p-3 rounded-full text-xl hover:bg-black hover:text-white transition"
+className="bg-gray-100 p-3 md:p-4 rounded-full hover:bg-black hover:text-white transition"
 >
 <FaTiktok />
 </motion.a>
@@ -218,29 +209,22 @@ className="bg-gray-100 p-3 rounded-full text-xl hover:bg-black hover:text-white 
 </section>
 
 
-
 {/* MAP */}
 
 <section className="h-[400px]">
 
 <iframe
-
 src="https://maps.google.com/maps?q=Hammadi%20Boumerdes&t=&z=13&ie=UTF8&iwloc=&output=embed"
-
 width="100%"
-
 height="100%"
-
 style={{border:0}}
-
 loading="lazy"
-
 />
 
 </section>
 
-
 </div>
 
 )
+
 }

@@ -4,152 +4,306 @@ import HeroSlider from "../components/HeroSlider"
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden">
 
-      {/* HERO SECTION */}
-      <section className="relative h-screen overflow-hidden">
+<div className="relative overflow-hidden">
 
-        {/* Automatic Luxury Slider */}
-        <HeroSlider />
+{/* HERO */}
 
-        {/* Dark Luxury Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+<section className="relative h-screen overflow-hidden">
 
-        {/* Gold Light Effect */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 
-        w-[900px] h-[500px] bg-yellow-500/10 blur-[150px] 
-        animate-pulse z-10"></div>
+<HeroSlider />
 
+<div className="absolute inset-0 bg-black/50 z-10"></div>
 
-     {/* BUTTON POSITION */}
 <div className="absolute top-[65%] left-1/2 -translate-x-1/2 z-20">
-  <motion.div
-    initial={{ opacity: 0, y: 60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.6 }}
-  >
-    <Link
-      to="/gallery"
-      className="bg-yellow-500 text-black font-semibold 
-                 px-6 py-2 sm:px-8 sm:py-3 md:px-12 md:py-4 
-                 rounded-full shadow-lg hover:shadow-yellow-500/40 
-                 transition duration-300 text-sm sm:text-base md:text-lg"
-    >
-      Voir nos réalisations
-    </Link>
-  </motion.div>
+
+<motion.div
+initial={{ opacity:0, y:60 }}
+animate={{ opacity:1, y:0 }}
+transition={{ duration:1.6 }}
+>
+
+<Link
+to="/gallery"
+className="bg-yellow-500 text-black px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition"
+>
+
+Voir nos réalisations
+
+</Link>
+
+</motion.div>
+
 </div>
-        {/* Scroll Animation */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
-        >
 
-          <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center">
-
-            <motion.div
-              animate={{ y: [0, 14, 0] }}
-              transition={{ repeat: Infinity, duration: 1.6 }}
-              className="w-1 h-3 bg-white rounded-full mt-2"
-            />
-
-          </div>
-
-        </motion.div>
-
-      </section>
+</section>
 
 
-      {/* FEATURES */}
-      <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+{/* ABOUT */}
 
-        <motion.h2
-          className="text-4xl font-bold mb-6 text-gray-800"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          Pourquoi choisir Gold Cuisine ?
-        </motion.h2>
+<section className="py-24 bg-white">
 
+<div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <motion.p
-          className="text-gray-600 max-w-3xl mx-auto mb-12"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          Nous concevons des cuisines modernes alliant design et qualité premium.
-        </motion.p>
+<motion.div
+initial={{opacity:0, x:-60}}
+whileInView={{opacity:1, x:0}}
+viewport={{once:true}}
+transition={{duration:0.8}}
+>
+
+<img
+src="/images/r12.jpeg"
+className="rounded-2xl shadow-xl w-full object-cover"
+/>
+
+</motion.div>
 
 
-        <div className="grid md:grid-cols-3 gap-8">
+<motion.div
+initial={{opacity:0, x:60}}
+whileInView={{opacity:1, x:0}}
+viewport={{once:true}}
+transition={{duration:0.8}}
+>
 
-          {[
-            { title: "Design Moderne", text: "Styles modernes et élégants" },
-            { title: "Qualité Premium", text: "Matériaux haut de gamme" },
-            { title: "Sur Mesure", text: "Fabrication personnalisée" },
+<p className="text-yellow-500 font-semibold mb-3">
+À propos de nous
+</p>
 
-          ].map((item, index) => (
+<h2 className="text-4xl font-bold mb-4">
+Gold Cuisine
+</h2>
 
-            <motion.div
-              key={index}
-              className="p-6 bg-white rounded-2xl shadow-lg 
-              hover:shadow-2xl hover:-translate-y-2 
-              transition duration-500 border border-gray-100"
+<div className="w-16 h-1 bg-yellow-500 mb-6"></div>
 
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-            >
+<p className="text-gray-600 mb-6 leading-relaxed">
 
-              <h3 className="text-xl font-semibold mb-3 text-yellow-600">
-                {item.title}
-              </h3>
+Gold Cuisine est spécialisée dans la fabrication de cuisines modernes,
+dressings et meubles sur mesure. Nous combinons design,
+qualité et fonctionnalité pour créer des espaces élégants
+et parfaitement adaptés à votre maison.
 
-              <p className="text-gray-600">
-                {item.text}
-              </p>
+</p>
 
-            </motion.div>
+<ul className="space-y-2 text-gray-700">
 
-          ))}
+<li>✔ Fabrication sur mesure</li>
+<li>✔ Matériaux de haute qualité</li>
+<li>✔ Design moderne</li>
+<li>✔ Installation professionnelle</li>
 
-        </div>
+</ul>
 
-      </section>
+</motion.div>
 
+</div>
 
-
-      {/* CTA */}
-      <section className="bg-gray-900 text-white py-16 text-center">
-
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          Prêt à transformer votre cuisine ?
-        </motion.h2>
+</section>
 
 
-        <Link
-          to="/contact"
-          className="bg-yellow-500 hover:bg-yellow-400 
-          text-black font-semibold 
-          px-8 py-3 rounded-full 
-          shadow-lg transition duration-300"
-        >
-          Demander un devis
-        </Link>
+{/* SERVICES */}
 
-      </section>
+<section className="py-24 bg-gray-100">
 
-    </div>
-  )
+<div className="max-w-6xl mx-auto px-6 text-center">
+
+<h2 className="text-4xl font-bold mb-16">
+Nos Services
+</h2>
+
+<div className="grid md:grid-cols-3 gap-10">
+
+<motion.div
+initial={{opacity:0, y:50}}
+whileInView={{opacity:1, y:0}}
+viewport={{once:true}}
+transition={{duration:0.6}}
+className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition"
+>
+
+<div className="text-5xl mb-6">🍽️</div>
+
+<h3 className="text-xl font-semibold mb-3">
+Cuisine Moderne
+</h3>
+
+<p className="text-gray-600">
+Conception et fabrication de cuisines modernes sur mesure avec des matériaux premium.
+</p>
+
+</motion.div>
+
+
+<motion.div
+initial={{opacity:0, y:50}}
+whileInView={{opacity:1, y:0}}
+viewport={{once:true}}
+transition={{duration:0.6, delay:0.2}}
+className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition"
+>
+
+<div className="text-5xl mb-6">👗</div>
+
+<h3 className="text-xl font-semibold mb-3">
+Dressing
+</h3>
+
+<p className="text-gray-600">
+Dressings élégants et personnalisés pour optimiser votre espace.
+</p>
+
+</motion.div>
+
+
+<motion.div
+initial={{opacity:0, y:50}}
+whileInView={{opacity:1, y:0}}
+viewport={{once:true}}
+transition={{duration:0.6, delay:0.4}}
+className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition"
+>
+
+<div className="text-5xl mb-6">📺</div>
+
+<h3 className="text-xl font-semibold mb-3">
+Meubles sur mesure
+</h3>
+
+<p className="text-gray-600">
+Meubles TV, meubles chaussures et chambres modernes adaptés à votre intérieur.
+</p>
+
+</motion.div>
+
+</div>
+
+</div>
+
+</section>
+
+{/* GALLERY PREVIEW */}
+
+<section className="py-20 px-6 max-w-6xl mx-auto text-center">
+
+<h2 className="text-3xl font-bold mb-12">
+Nos Réalisations
+</h2>
+
+<div className="grid md:grid-cols-3 gap-6">
+
+{/* BIG IMAGE */}
+
+<div className="relative md:col-span-2 h-[420px] overflow-hidden rounded-2xl shadow-xl group">
+
+<img
+src="/images/p27.jpeg"
+className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+/>
+
+<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+
+<p className="text-white text-xl font-semibold">
+Cuisine Moderne
+</p>
+
+</div>
+
+</div>
+
+{/* RIGHT COLUMN */}
+
+<div className="flex flex-col gap-6">
+
+<div className="relative h-[200px] overflow-hidden rounded-2xl shadow-xl group">
+
+<img
+src="/images/p26.jpeg"
+className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+/>
+
+<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+
+<p className="text-white font-semibold">
+Dressing
+</p>
+
+</div>
+
+</div>
+
+<div className="relative h-[200px] overflow-hidden rounded-2xl shadow-xl group">
+
+<img
+src="/images/p22.jpeg"
+className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+/>
+
+<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+
+<p className="text-white font-semibold">
+Meuble TV
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<Link
+to="/gallery"
+className="inline-block mt-12 bg-yellow-500 text-black px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+>
+
+Voir toute la galerie
+
+</Link>
+
+</section>
+
+{/* WHY CHOOSE US */}
+
+<section className="bg-gray-900 text-white py-16 text-center">
+
+<h2 className="text-3xl font-bold mb-6">
+Pourquoi choisir Gold Cuisine ?
+</h2>
+
+<p className="text-gray-300 max-w-2xl mx-auto">
+
+✔ Fabrication sur mesure  
+✔ Matériaux de haute qualité  
+✔ Design moderne  
+✔ Installation professionnelle  
+
+</p>
+
+</section>
+
+
+{/* CTA */}
+
+<section className="py-16 text-center">
+
+<h2 className="text-3xl font-bold mb-6">
+Prêt à transformer votre cuisine ?
+</h2>
+
+<Link
+to="/contact"
+className="bg-yellow-500 text-black px-8 py-3 rounded-full hover:bg-yellow-400 transition"
+>
+
+Demander un devis
+
+</Link>
+
+</section>
+
+</div>
+
+)
 }

@@ -23,23 +23,52 @@ export default function Gallery() {
     { src: "/images/r5.jpeg", category: "Cuisine" },
     { src: "/images/r8.jpeg", category: "Cuisine" },
     { src: "/images/r12.jpeg", category: "Cuisine" },
-  { src: "/images/r24.jpeg", category: "Cuisine" },
-   { src: "/images/r30.jpeg", category: "Cuisine" },
+    { src: "/images/r24.jpeg", category: "Cuisine" },
+    { src: "/images/r30.jpeg", category: "Cuisine" },
     { src: "/images/r33.jpeg", category: "Cuisine" },
+    { src: "/images/r32.jpeg", category: "Cuisine" },
 
-    
+    { src: "/images/p58.jpeg", category: "Cuisine" },
+    { src: "/images/p55.jpeg", category: "Cuisine" },
+    { src: "/images/p51.jpeg", category: "Cuisine" },
+    { src: "/images/p26.jpeg", category: "Cuisine" },
+
     { src: "/images/r31.jpeg", category: "Chambre à coucher" },
     { src: "/images/r25.jpeg", category: "Chambre à coucher" },
- { src: "/images/r16.jpeg", category: "Chambre à coucher" },
- { src: "/images/r7.jpeg", category: "Chambre à coucher" },
-  { src: "/images/r4.jpeg", category: "Chambre à coucher" },
+    { src: "/images/r16.jpeg", category: "Chambre à coucher" },
+    { src: "/images/r7.jpeg", category: "Chambre à coucher" },
+    { src: "/images/r4.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p54.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p53.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p52.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p51.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p26.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p5.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p8.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p22.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p25.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p28.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p32.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p34.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p35.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p37.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p43.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p44.jpeg", category: "Chambre à coucher" },
+    { src: "/images/p50.jpeg", category: "Chambre à coucher" },
 
     { src: "/images/r13.jpeg", category: "Meuble TV" },
     { src: "/images/r14.jpeg", category: "Meuble TV" },
-     { src: "/images/r26.jpeg", category: "Meuble TV" },
+    { src: "/images/r26.jpeg", category: "Meuble TV" },
+    { src: "/images/p48.jpeg", category: "Meuble TV" },
+    { src: "/images/p6.jpeg", category: "Meuble TV" },
+    { src: "/images/p27.jpeg", category: "Meuble TV" },
 
-    //{ src: "/images/r10.jpeg", category: "Meuble chaussure" },
-  //  { src: "/images/r11.jpeg", category: "Meuble chaussure" },
+    { src: "/images/p12.jpeg", category: "Meuble chaussure" },
+    { src: "/images/p60.jpeg", category: "Meuble chaussure" },
+    { src: "/images/p61.jpeg", category: "Meuble chaussure" },
+    { src: "/images/p63.jpeg", category: "Meuble chaussure" },
+    { src: "/images/p64.jpeg", category: "Meuble chaussure" },
+
     { src: "/images/r1.jpeg", category: "Dressing" },
     { src: "/images/r2.jpeg", category: "Dressing" },
     { src: "/images/r6.jpeg", category: "Dressing" },
@@ -52,10 +81,37 @@ export default function Gallery() {
     { src: "/images/r19.jpeg", category: "Dressing" },
     { src: "/images/r20.jpeg", category: "Dressing" },
     { src: "/images/r22.jpeg", category: "Dressing" },
-{ src: "/images/r23.jpeg", category: "Dressing" },
+    { src: "/images/p1.jpeg", category: "Dressing" },
+    { src: "/images/p2.jpeg", category: "Dressing" },
+    { src: "/images/p3.jpeg", category: "Dressing" },
+    { src: "/images/p4.jpeg", category: "Dressing" },
+    { src: "/images/p9.jpeg", category: "Dressing" },
+    { src: "/images/r11.jpeg", category: "Dressing" },
+    { src: "/images/p14.jpeg", category: "Dressing" },
+    { src: "/images/p16.jpeg", category: "Dressing" },
+    { src: "/images/r17.jpeg", category: "Dressing" },
+    { src: "/images/p18.jpeg", category: "Dressing" },
+    { src: "/images/p19.jpeg", category: "Dressing" },
+    { src: "/images/p20.jpeg", category: "Dressing" },
+    { src: "/images/p21.jpeg", category: "Dressing" },
+    { src: "/images/p30.jpeg", category: "Dressing" },
+    { src: "/images/p31.jpeg", category: "Dressing" },
+    { src: "/images/p36.jpeg", category: "Dressing" },
+    { src: "/images/p39.jpeg", category: "Dressing" },
+    { src: "/images/p40.jpeg", category: "Dressing" },
+    { src: "/images/p42.jpeg", category: "Dressing" },
+    { src: "/images/p45.jpeg", category: "Dressing" },
+    { src: "/images/p46.jpeg", category: "Dressing" },
+    { src: "/images/p49.jpeg", category: "Dressing" },
+    { src: "/images/p56.jpeg", category: "Dressing" },
+    { src: "/images/p57.jpeg", category: "Dressing" },
+    { src: "/images/p63.jpeg", category: "Dressing" },
+
+    { src: "/images/r23.jpeg", category: "Dressing" },
     { src: "/images/r27.jpeg", category: "Dressing" },
     { src: "/images/r28.jpeg", category: "Dressing" },
     { src: "/images/r29.jpeg", category: "Dressing" },
+    { src: "/images/p40.jpeg", category: "Dressing" },
   ]
 
   // Filter images
@@ -125,20 +181,20 @@ export default function Gallery() {
         </PhotoProvider>
       </section>
 
-    {/* INSTAGRAM FEED */}
-<section className="pb-20 px-6 max-w-6xl mx-auto text-center">
-  <h2 className="text-3xl font-bold mb-6">
-    Suivez-nous sur Instagram
-  </h2>
+      {/* INSTAGRAM FEED */}
+      <section className="pb-20 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">
+          Suivez-nous sur Instagram
+        </h2>
 
-  <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
-  <div class="elfsight-app-03420ed0-38d8-4173-bfec-15662615e97a" data-elfsight-app-lazy></div>
-  </div>
+        <div className="relative w-full overflow-hidden rounded-xl shadow-xl">
+          <div class="elfsight-app-03420ed0-38d8-4173-bfec-15662615e97a" data-elfsight-app-lazy></div>
+        </div>
 
-  <p className="text-gray-500 mt-4">
-    Les dernières publications directement depuis notre compte Instagram.
-  </p>
-</section>
+        <p className="text-gray-500 mt-4">
+          Les dernières publications directement depuis notre compte Instagram.
+        </p>
+      </section>
 
     </div>
   )
