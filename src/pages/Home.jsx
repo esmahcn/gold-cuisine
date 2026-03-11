@@ -24,12 +24,10 @@ transition={{ duration:1.6 }}
 >
 
 <Link
-to="/gallery"
-className="bg-yellow-500 text-black px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition"
+  to="/gallery"
+  className="bg-yellow-500 text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-lg hover:bg-yellow-400 transition text-sm sm:text-base"
 >
-
-Voir nos réalisations
-
+  Voir nos réalisations
 </Link>
 
 </motion.div>
