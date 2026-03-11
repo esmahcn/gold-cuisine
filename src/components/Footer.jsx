@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
 
 export default function Footer() {
@@ -43,10 +44,10 @@ export default function Footer() {
             Navigation
           </h3>
           <ul className="space-y-2">
-            <li><a href="/" className="hover:text-yellow-500 transition">Home</a></li>
-            <li><a href="/about" className="hover:text-yellow-500 transition">About</a></li>
-            <li><a href="/gallery" className="hover:text-yellow-500 transition">Gallery</a></li>
-            <li><a href="/contact" className="hover:text-yellow-500 transition">Contact</a></li>
+            <li><Link to="/" className="hover:text-yellow-500 transition">Home</Link></li>
+            <li><Link to="/about" className="hover:text-yellow-500 transition">About</Link></li>
+            <li><Link to="/gallery" className="hover:text-yellow-500 transition">Gallery</Link></li>
+            <li><Link to="/contact" className="hover:text-yellow-500 transition">Contact</Link></li>
           </ul>
         </div>
 
