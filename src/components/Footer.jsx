@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 export default function Footer() {
   return (
@@ -22,20 +23,48 @@ export default function Footer() {
             Contact
           </h3>
 
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center justify-center md:justify-start gap-3 mb-3"
+          >
             <FaWhatsapp className="text-yellow-500" />
-            <span>0557 07 58 75</span>
-          </div>
+            <a
+              href="https://wa.me/213557075875"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-500 transition"
+            >
+              0557 07 58 75
+            </a>
+          </motion.div>
 
-          <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center justify-center md:justify-start gap-3 mb-3"
+          >
             <FaEnvelope className="text-yellow-500" />
-            <span>goldcuisine11@gmail.com</span>
-          </div>
+            <a
+              href="mailto:goldcuisine11@gmail.com"
+              className="hover:text-yellow-500 transition"
+            >
+              goldcuisine11@gmail.com
+            </a>
+          </motion.div>
 
-          <div className="flex items-center justify-center md:justify-start gap-3">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center justify-center md:justify-start gap-3"
+          >
             <FaMapMarkerAlt className="text-yellow-500" />
-            <span>Lotissement 11N22 centre Hammadi Boumerdes</span>
-          </div>
+            <a
+              href="https://www.google.com/maps?q=Lotissement+11N22+centre+Hammadi+Boumerdes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-500 transition"
+            >
+              Lotissement 11N22 centre Hammadi Boumerdes
+            </a>
+          </motion.div>
         </div>
 
         {/* Quick Links */}
@@ -44,10 +73,26 @@ export default function Footer() {
             Navigation
           </h3>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:text-yellow-500 transition">Home</Link></li>
-            <li><Link to="/about" className="hover:text-yellow-500 transition">About</Link></li>
-            <li><Link to="/gallery" className="hover:text-yellow-500 transition">Gallery</Link></li>
-            <li><Link to="/contact" className="hover:text-yellow-500 transition">Contact</Link></li>
+            <li>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link to="/" className="hover:text-yellow-500 transition">Home</Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link to="/about" className="hover:text-yellow-500 transition">About</Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link to="/gallery" className="hover:text-yellow-500 transition">Gallery</Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link to="/contact" className="hover:text-yellow-500 transition">Contact</Link>
+              </motion.div>
+            </li>
           </ul>
         </div>
 
