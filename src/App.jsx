@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
+import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -31,6 +32,9 @@ export default function App() {
 
   return (
     <Layout>
+      {/* Scroll to top on route change */}
+      <ScrollToTop />
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route
