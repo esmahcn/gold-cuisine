@@ -24,7 +24,7 @@ export default function MusicPlayer() {
 
       {/* Audio */}
       <audio ref={audioRef} loop>
-        <source src="/images/bg-music2.mp3" type="audio/mp3" />
+        <source src="/images/Toto Cutugno - L'italiano.mp3" type="audio/mp3" />
       </audio>
 
 
